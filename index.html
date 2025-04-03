@@ -110,6 +110,13 @@
   color: #ddd; /* Color when hovering over the link */
 }
 
+.contact-section img {
+   width: 50px;
+   height: 50px;
+   margin: 10px;
+}
+
+
 /* CSS for Sticky Navbar */
 .navbar {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
@@ -208,7 +215,6 @@ html {
 
 
 <!-- Skills Section -->
-<!-- Skills Section -->
 <section id="skills" class="skills-section bg-white">
   <div class="container">
     <h2 class="text-center">Skills</h2>
@@ -267,29 +273,15 @@ html {
 
 <!-- Contact Me Section -->
 <section id="contact" class="contact-section text-center text-white bg-dark">
-  <div class="container">
-    <h2>Contact me</h2>
-    <div class="row">
-	<div class="col-lg-4 col-md-4 mb-4">
-        <a href="mailto:odenyjacob@gmail.com">
-          <img src="icons/gmail.png" alt="Gmail" class="social-icon">
-          Email: odenyjacob@gmail.com
-        </a>
-      </div>
-      <div class="col-lg-4 col-md-4 mb-4">
-        <a href="https://www.linkedin.com/in/odeny-jacob-2498a4156" target="_blank">
-          <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
-          LinkedIn
-        </a>
-      </div>     
-      <div class="col-lg-4 col-md-4 mb-4">
-        <a href="https://github.com/odenyjacob" target="_blank">
-          <img src="icons/github.png" alt="GitHub" class="social-icon">
-          GitHub
-        </a>
-      </div>      
-    </div>
-  </div>
+ <div class="container">
+  <h2>Contact me</h2>
+   <div class="contact-section">
+   <a href="https://www.linkedin.com/in/odeny-jacob-2498a4156"><img src="icons/linkedin-icon.png" alt="LinkedIn"></a>
+   <a href="https://github.com/odenyjacob"><img src="icons/github-icon.png" alt="GitHub"></a>
+   <a href="mailto:odenyjacob@gmail.com"><img src="icons/email-icon.png" alt="Email"></a> 
+   <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/odenyjacob/jacobodeny.github.io/main/doc/resume/Jacob%20Odeny%20Resume.pdf&embedded=true"><img src="icons/resume-icon.png" alt="Resume"></a>
+   </div>  
+ </div>
 </section>
 
 <!-- Sticky Navigation Bar -->
@@ -330,5 +322,7 @@ html {
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 </body>
 </html>
