@@ -1,286 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jacob Odeny - Clinical Data Engineer</title>
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-<style>
-  .about-section {
-    text-align: center;
-    padding: 50px 0;
-  }
-  .about-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  .about-section img {
-    width: 200px; /* Adjust the size as needed */
-    height: 200px;
-    border-radius: 50%; /* Makes the image round */
-    margin-bottom: 20px;
-  }
-  .about-section p {
-    color: #333;
-  }
-
-  /* Additional CSS for Projects Section */
-.projects-section h2 {
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-}
-.card {
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow around the card */
-}
-.card-img-top {
-  max-height: 180px; /* Adjust this value to fit the image properly in the card */
-  object-fit: cover; /* This makes sure the image covers the area properly */
-}
-.card-body {
-  padding: 15px;
-}
-.card-title {
-  font-size: 1.25rem;
-}
-.card-text {
-  margin-bottom: 15px;
-}
-
-/* Additional CSS for Skills Section */
-.skills-section h2 {
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-}
-.skills-section .card {
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.skills-section .card-img-top {
-  padding: 20px; /* Add padding around your images if needed */
-  background-color: #f8f9fa; /* Adjust the background color if your images have transparent areas */
-  height: 180px; /* Fixed height for consistency */
-  object-fit: contain; /* This will make sure the image is scaled properly within the container */
-}
-.skills-section .card-body {
-  padding: 15px;
-}
-.skills-section .card-title {
-  font-size: 1.25rem;
-  margin-bottom: 15px;
-}
-.skills-section .btn-outline-primary {
-  color: #007bff;
-  border-color: #007bff;
-}
-.skills-section .btn-outline-primary:hover {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-/* Additional CSS for Contact Section */
-.contact-section {
-  padding: 50px 0;
-}
-.contact-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-.contact-section p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-.social-icon {
-  width: 50px; /* Size of your icons */
-  margin-bottom: 10px;
-}
-/* Hover effect for icons */
-.social-icon:hover {
-  opacity: 0.7;
-}
-/* Style for links in the Contact section */
-.contact-section a {
-  color: #fff;
-  text-decoration: none; /* Removes underline from links */
-  display: inline-block; /* Allows for margin on the bottom */
-  margin-bottom: 10px;
-}
-.contact-section a:hover {
-  color: #ddd; /* Color when hovering over the link */
-}
-
-.contact-section img {
-   width: 50px;
-   height: 50px;
-   margin: 10px;
-}
-
-
-/* CSS for Sticky Navbar */
-.navbar {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
-}
-
-/* Ensure padding is added to body to avoid content being hidden behind the navbar */
-body { 
-  padding-top: 56px; /* Adjust this value based on the height of your navbar */
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Style for navigation bar links */
-.navbar-nav .nav-link {
-  color: white;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #f8f9fa; /* Slightly lighter white when hovering over links */
-}
-
-/* Media query for responsive navbar collapsing */
-@media (max-width: 992px) {
-  .navbar-collapse {
-    background-color: #343a40; /* Same as navbar color for seamless look */
-  }
-}
-
-/* Tech tags styling */
-.tech-tags {
-  margin-bottom: 12px;
-}
-.tech-tags .badge {
-  margin-right: 5px;
-  font-size: 0.75rem;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Odeny - Clinical Data Manager/Engineer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 0 auto 20px;
+            display: block;
+        }
+        
+        .tab-content {
+            padding: 30px;
+            background: #fff;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            min-height: 500px;
+        }
+        
+        .nav-tabs {
+            border-bottom: 2px solid #dee2e6;
+        }
+        
+        .nav-tabs .nav-link {
+            border: none;
+            color: #495057;
+            font-weight: 600;
+            padding: 12px 25px;
+            transition: all 0.3s;
+        }
+        
+        .nav-tabs .nav-link:hover {
+            border: none;
+            color: #0d6efd;
+        }
+        
+        .nav-tabs .nav-link.active {
+            color: #0d6efd;
+            background-color: transparent;
+            border-bottom: 3px solid #0d6efd;
+        }
+        
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .tech-tags .badge {
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .skill-icon {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-right: 15px;
+        }
+        
+        .table {
+            margin-top: 20px;
+        }
+        
+        .table thead th {
+            background-color: #0d6efd;
+            color: white;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: #0d6efd;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .nav-tabs .nav-link {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<section id='about' class="about-section">
-  <div class="container">
-    <h2>Jacob Odeny</h2>
-	<h3>Clinical Data Manager/Engineer</h3>
-    <img src="images/about/jacob-odeny.jpg" alt="About Me">
-    <p>Data practitioner with over 12 years of experience in public health and clinical trial data management activities within pharmaceutical industry and CROs.</p>
-    <p>Strong focus on delivering to time and quality expectations with excellent leadership and communication skills and willingness to support and mentor others.</p>
-	<p>Ability to work both within a team environment and independently as required.</p>
-	<p>Prior to my current position of an FSP Clinical Data Manager/Engineer, I held positions of a data manager and data analyst.</p>
-  </div>
-</section>
-
-
-<!-- Projects Section -->
-<section id="projects" class="projects-section bg-light" id="projects">
-  <div class="container">
-    <h2 class="text-center">Projects</h2>
-    <div class="row">
-      <!-- Clinical Studies Dashboard -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/clinical-trials-dashboard.jpg" class="card-img-top" alt="Clinical Studies Dashboard">
-          <div class="card-body">
-            <h5 class="card-title">Clinical Studies Dashboard</h5>
-            <p class="card-text">
-              Interactive dashboard that transforms clinical trial information into actionable insights for higher level management. Features include 
-              color-coded visualizations and smart filters.
-            </p>
-            <div class="tech-tags mb-2">
-              <span class="badge bg-primary">R Shiny</span>
-              <span class="badge bg-secondary">Plotly</span>
-              <span class="badge bg-success">DataViz</span>
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4">Jacob Odeny</h1>
+            <h2 class="text-muted">Clinical Data Manager/Engineer</h2>
+        </div>
+        
+        <!-- Tab Navigation -->
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="true">About Me</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills" type="button" role="tab" aria-controls="skills" aria-selected="false">Skills</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects" type="button" role="tab" aria-controls="projects" aria-selected="false">Projects</button>
+            </li>
+        </ul>
+        
+        <!-- Tab Content -->
+        <div class="tab-content" id="myTabContent">
+            <!-- About Me Tab -->
+            <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+                <div class="row">
+                    <div class="col-lg-4 text-center">
+                        <img src="images/about/jacob-odeny.jpg" alt="Jacob Odeny" class="profile-img">
+                    </div>
+                    <div class="col-lg-8">
+                        <h3 class="section-title">Professional Profile</h3>
+                        <p>Data practitioner with over 12 years of experience in public health and clinical trial data management activities within pharmaceutical industry and CROs.</p>
+                        <p>Strong focus on delivering to time and quality expectations with excellent leadership and communication skills and willingness to support and mentor others.</p>
+                        <p>Ability to work both within a team environment and independently as required.</p>
+                        <p>Prior to my current position of an FSP Clinical Data Manager/Engineer, I held positions of a data manager and data analyst.</p>
+                        
+                        <div class="mt-4">
+                            <h3 class="section-title">Key Strengths</h3>
+                            <ul>
+                                <li>Extensive experience in clinical data management systems</li>
+                                <li>Proficient in data extraction, transformation, and visualization</li>
+                                <li>Strong analytical and problem-solving skills</li>
+                                <li>Excellent communication and team collaboration</li>
+                                <li>Mentoring and leadership capabilities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a href="https://odenyjacob.shinyapps.io/studies-dashboard/" target="_blank" class="btn btn-primary">Live Demo</a>
-            <a href="https://github.com/odenyjacob/studies-dashboard/blob/main/app.R" class="btn btn-secondary">Source Code</a>
-          </div>
+            
+            <!-- Skills Tab -->
+            <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skills-tab">
+                <h3 class="section-title">Technical Skills</h3>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Skill Category</th>
+                            <th>Tools & Technologies</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="images/skills/dm.jpg" alt="Data Management" class="skill-icon">
+                                    <span>Data Management</span>
+                                </div>
+                            </td>
+                            <td>Medidata Rave, Veeva CDB, Medrio, ODK, RedCap, Commcare, Microsoft Access</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="images/skills/etl.png" alt="Data ETL" class="skill-icon">
+                                    <span>Data ETL</span>
+                                </div>
+                            </td>
+                            <td>Elluminate, Veeva CDB, SQL</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="images/skills/dma.jpg" alt="Data Analysis" class="skill-icon">
+                                    <span>Data Manipulation & Analysis</span>
+                                </div>
+                            </td>
+                            <td>Microsoft Excel, SPSS, R, STATA, SAS, Python</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="images/skills/dtl.jpg" alt="Data Transformation" class="skill-icon">
+                                    <span>Data Transformation & Listing</span>
+                                </div>
+                            </td>
+                            <td>Veeva CDB, Elluminate, JReview, R, SQL</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="images/skills/DataViz.png" alt="Data Visualization" class="skill-icon">
+                                    <span>Data Visualization</span>
+                                </div>
+                            </td>
+                            <td>Qlik Sense, R Shiny, Tableau, Power BI, Microsoft Excel</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="images/skills/wbp.jpg" alt="Web Development" class="skill-icon">
+                                    <span>Web-based Programming</span>
+                                </div>
+                            </td>
+                            <td>HTML, CSS, JavaScript, PHP</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Projects Tab -->
+            <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="projects-tab">
+                <h3 class="section-title">Featured Projects</h3>
+                <div class="row">
+                    <!-- Clinical Studies Dashboard -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <img src="images/projects/clinical-trials-dashboard.jpg" class="card-img-top" alt="Clinical Studies Dashboard">
+                            <div class="card-body">
+                                <h5 class="card-title">Clinical Studies Dashboard</h5>
+                                <p class="card-text">
+                                    Interactive dashboard that transforms clinical trial information into actionable insights for higher level management. Features include 
+                                    color-coded visualizations and smart filters.
+                                </p>
+                                <div class="tech-tags mb-3">
+                                    <span class="badge bg-primary">R Shiny</span>
+                                    <span class="badge bg-secondary">Plotly</span>
+                                    <span class="badge bg-success">DataViz</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <a href="https://odenyjacob.shinyapps.io/studies-dashboard/" target="_blank" class="btn btn-primary me-2">Live Demo</a>
+                                <a href="https://github.com/odenyjacob/studies-dashboard/blob/main/app.R" target="_blank" class="btn btn-outline-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Clinical Data Cleaning Tool</h5>
+                                <p class="card-text">Automated tool for identifying and resolving data quality issues in clinical trial datasets, reducing manual review time by 60%.</p>
+                                <div class="tech-tags mb-3">
+                                    <span class="badge bg-primary">Python</span>
+                                    <span class="badge bg-secondary">Pandas</span>
+                                    <span class="badge bg-success">Data Quality</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <a href="#" class="btn btn-primary me-2">Live Demo</a>
+                                <a href="#" class="btn btn-outline-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Data listing -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <img src="images/projects/listings.jpg" class="card-img-top" alt="Data listing">
+                            <div class="card-body">
+                                <h5 class="card-title">Data Listing and Report</h5>
+                                <p class="card-text">The analysis focuses on identifying visits where vital signs documentation is missing, which is critical for patient safety and quality reporting. The report includes:-</p>
+								<li>Patient demographic overview</li>
+								<li>Visit records analysis</li>
+								<li>Data quality gap identification</li>
+								<li>Interactive visualizations of missing data patterns</li>
+								<li>Automate and standardize reporting by rendering reproducible HTML reports with current data using</li>
+								<p>This work exemplifies how data analysis can improve clinical documentation completeness and support healthcare quality improvement initiatives.</p>
+                                <div class="tech-tags mb-3">
+                                    <span class="badge bg-primary">Data wrangling</span>
+                                    <span class="badge bg-secondary">R Markdown</span>
+                                    <span class="badge bg-success">Daata visualization</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <a href="https://rpubs.com/odenyj/1296580" class="btn btn-primary me-2">Live Demo</a>
+                                <a href="https://rpubs.com/odenyj/1296580" class="btn btn-outline-secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <!-- Project 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2">
-          <div class="card-body">
-            <h5 class="card-title">Project 2</h5>
-            <p class="card-text">Project description</p>
-            <a href="https://odenyjacob.shinyapps.io/studies-dashboard" class="btn btn-primary">Live Demo</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
-          </div>
-        </div>
-      </div>
-      <!-- Project 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Project 3</h5>
-            <p class="card-text">Project description</p>
-            <a href="#" class="btn btn-primary">Live Demo</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
-          </div>
-        </div>
-      </div>
     </div>
 
-  </div>
-</section>
-
-
-<!-- Skills Section -->
-<section id="skills" class="skills-section bg-white">
-  <div class="container">
-    <h2 class="text-center">Skills</h2>
-    <table class="table table-bordered">
-      <thead class="thead-dark">
-        <tr>
-          <th>Skill</th>
-          <th>Tool</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Data Management -->
-        <tr>
-          <td><img src="images/skills/dm.jpg" alt="Data Management" style="width: 50px;">
-		  Data Management</td>
-          <td>Medidata Rave, Veeva CDB, Medrio, ODK, RedCap, Commcare, Microsoft Access</td>
-        </tr>
-        <!-- Data ETL -->
-        <tr>
-          <td>
-		  <img src="images/skills/etl.png" alt="Data ETL" style="width: 50px;">
-		  Data ETL</td>
-          <td>Elluminate, Veeva CDB, SQL</td>
-        </tr>
-        <!-- Data Manipulation & Analysis -->
-        <tr>
-          <td><img src="images/skills/dma.jpg" alt="Data Manipulation & Analysis" style="width: 50px;">
-		  Data Manipulation & Analysis</td>
-          <td>Microsoft Excel, SPSS, R, STATA, SAS, Python</td>
-        </tr>
-        <!-- Data Transformation & Listing -->
-        <tr>
-          <td><img src="images/skills/dtl.jpg" alt="Data Transformation & Listing" style="width: 50px;">
-		  Data Transformation & Listing</td>
-          <td>Veeva CDB, Elluminate, JReview, R, SQL</td>
-        </tr>
-        <!-- Data Visualization -->
-        <tr>
-		<td>
-            <img src="images/skills/DataViz.png" alt="Data Visualization" style="width: 50px;">           
-          Data Visualization</td>
-          <td>Qlik Sense, R Shiny, Tableau, Power BI, Microsoft Excel</td>
-        </tr>
-        <!-- Web-based Programming -->
-        <tr>
-          <td><img src="images/skills/wbp.jpg" alt="Web-based Programming" style="width: 50px;">
-		  Web-based Programming</td>
-          <td>HTML, CSS, JavaScript, PHP</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
