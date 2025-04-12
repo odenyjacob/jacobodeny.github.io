@@ -101,6 +101,59 @@
             background: #0d6efd;
         }
         
+        .certification-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+        }
+        
+        .certification-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .certification-content {
+            flex-grow: 1;
+        }
+        
+        .certification-item:last-child {
+            border-bottom: none;
+        }
+        
+        .certification-date {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        .certification-issuer {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 5px;
+        }
+        
+        .certification-credential {
+            display: inline-block;
+            background-color: #f8f9fa;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+        
+        .certification-credential a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .certification-credential a:hover {
+            text-decoration: underline;
+        }
+        
         @media (max-width: 768px) {
             .profile-img {
                 width: 150px;
@@ -110,6 +163,14 @@
             .nav-tabs .nav-link {
                 padding: 10px 15px;
                 font-size: 0.9rem;
+            }
+            
+            .certification-item {
+                flex-direction: column;
+            }
+            
+            .certification-logo {
+                margin-bottom: 15px;
             }
         }
     </style>
@@ -131,6 +192,9 @@
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects" type="button" role="tab" aria-controls="projects" aria-selected="false">Projects</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="certifications-tab" data-bs-toggle="tab" data-bs-target="#certifications" type="button" role="tab" aria-controls="certifications" aria-selected="false">Licenses & Certifications</button>
             </li>
         </ul>
         
@@ -154,7 +218,7 @@
                             <ul>
                                 <li>Extensive experience in clinical data management systems</li>
                                 <li>Proficient in data extraction, transformation, and visualization</li>
-								<li>Proficient in clinical data programming</li>
+                                <li>Proficient in clinical data programming</li>
                                 <li>Strong analytical and problem-solving skills</li>
                                 <li>Excellent communication and team collaboration</li>
                                 <li>Mentoring and leadership capabilities</li>
@@ -191,7 +255,7 @@
                                     <span>Data ETL</span>
                                 </div>
                             </td>
-                            <td>Elluminate, Veeva CDB, SQL</td>
+                            <td>Elluminate, Veeva CDB, SQL, Databricks, Apache Spark</td>
                         </tr>
                         <tr>
                             <td>
@@ -228,7 +292,7 @@
                                 </div>
                             </td>
                             <td>HTML, CSS, JavaScript, PHP</td>
-							<tr>
+                            <tr>
                             <td>
                                 <div class="d-flex align-items-center">
                                     <img src="images/skills/cloud.png" alt="Cloud Computing" class="skill-icon">
@@ -255,11 +319,11 @@
                                 <p class="card-text">
                                     Interactive dashboard that transforms clinical trial information into actionable insights for higher level management. Features include:-</p>
                                     <li>Color-coded visualizations and smart filters</li>
-									<li>Total number of studies (active, completed etc)</li>
-									<li>Studies by phase (1, 2, 3B, 4)</li>
-									<li>Studies by therapeutic area</li>
-									<li>Studies by completion status</li>
-									<li>Studies by PI</li>	
+                                    <li>Total number of studies (active, completed etc)</li>
+                                    <li>Studies by phase (1, 2, 3B, 4)</li>
+                                    <li>Studies by therapeutic area</li>
+                                    <li>Studies by completion status</li>
+                                    <li>Studies by PI</li>	
                                 <div class="tech-tags mb-3">
                                     <span class="badge bg-primary">R Shiny</span>
                                     <span class="badge bg-secondary">Plotly</span>
@@ -272,20 +336,20 @@
                             </div>
                         </div>
                     </div>
-					
-					 <!-- Data listing -->
+                    
+                     <!-- Data listing -->
                     <div class="col-md-6 col-lg-4 mb-4">
                         <div class="card h-100">
                             <img src="images/projects/listings.jpg" class="card-img-top" alt="Data listing">
                             <div class="card-body">
                                 <h5 class="card-title">Data Listing and Report</h5>
                                 <p class="card-text">The analysis focuses on identifying visits where vital signs documentation is missing, which is critical for patient safety and quality reporting. The report includes:-</p>
-								<li>Patient demographic overview</li>
-								<li>Visit records analysis</li>
-								<li>Data quality gap identification</li>
-								<li>Interactive visualizations of missing data patterns</li>
-								<li>Automate and standardize reporting by rendering reproducible HTML reports with current data using</li>
-								<p>This work exemplifies how data analysis can improve clinical documentation completeness and support healthcare quality improvement initiatives.</p>
+                                <li>Patient demographic overview</li>
+                                <li>Visit records analysis</li>
+                                <li>Data quality gap identification</li>
+                                <li>Interactive visualizations of missing data patterns</li>
+                                <li>Automate and standardize reporting by rendering reproducible HTML reports with current data using</li>
+                                <p>This work exemplifies how data analysis can improve clinical documentation completeness and support healthcare quality improvement initiatives.</p>
                                 <div class="tech-tags mb-3">
                                     <span class="badge bg-primary">Data wrangling</span>
                                     <span class="badge bg-secondary">R Markdown</span>
@@ -321,6 +385,221 @@
                    
                 </div>
             </div>
+            
+ <!-- Certifications Tab -->
+<div class="tab-pane fade" id="certifications" role="tabpanel" aria-labelledby="certifications-tab">
+    <h3 class="section-title">Licenses & Certifications</h3>
+    
+    <div class="certification-item">
+        <img src="images/skills/jreview.png" alt="JReview Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>JReview</h4>
+            <div class="certification-issuer">Integrated Clinical Systems, Inc</div>
+            <div class="certification-date">Issued Nov 2024</div>
+            <div class="certification-credential">Credential ID: <a href="#">JReview</a></div>
+            <div class="certification-credential">Credential URL: <a href="#">JReview</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/veeva.png" alt="Veeva Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>Veeva Clinical Platform</h4>
+            <div class="certification-issuer">Veeva Systems</div>
+            <div class="certification-date">Issued Oct 2023</div>                        
+            <div class="certification-credential">Credential URL: <a href="#">Veeva Systems</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/elluminate.png" alt="eClinical Solutions Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>elluminate</h4>
+            <div class="certification-issuer">eClinical Solutions</div>
+            <div class="certification-date">Issued Aug 2023</div>
+            <div class="certification-credential">Credential URL: <a href="#">elluminate</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/medidata.png" alt="Medidata Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>Medidata Rave</h4>
+            <div class="certification-issuer">Medidata</div>
+            <div class="certification-date">Issued Feb 2021</div>
+            <div class="certification-credential">Credential URL: <a href="#">Medidata</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/medrio.png" alt="Medrio Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>Medrio</h4>
+            <div class="certification-issuer">Medrio</div>
+            <div class="certification-date">Issued Aug 2021</div>
+            <div class="certification-credential">Credential URL: <a href="#">Medrio</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/who.png" alt="WHO Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>Ethics and Review of Interventional Clinical Research</h4>
+            <div class="certification-issuer">World Health Organization</div>
+            <div class="certification-date">Issued Nov 2024</div>
+            <div class="certification-credential">Credential ID: <a href="http://openwho.org/verify/xigez-dagyp-sotud-tadam-gesuv">http://openwho.org/verify/xigez-dagyp-sotud-tadam-gesuv</a></div>
+            <div class="certification-credential">Credential URL: <a href="http://openwho.org/verify/xigez-dagyp-sotud-tadam-gesuv">http://openwho.org/verify/xigez-dagyp-sotud-tadam-gesuv</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/Udemy_logo.png" alt="Udemy Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>Power BI - Data Analytics Essentials with Power BI</h4>
+            <div class="certification-issuer">Udemy</div>
+            <div class="certification-date">Issued Oct 2024</div>
+            <div class="certification-credential">Credential ID: UC-5b853030-1535-4e70-864a-1de39f073842</div>
+            <div class="certification-credential">Credential URL: <a href="https://www.udemy.com/certificate/UC-5b853030-1535-4e70-864a-1de39f073842">https://www.udemy.com/certificate/UC-5b853030-1535-4e70-864a-1de39f073842</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/Udemy_logo.png" alt="Udemy Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>Amazon Web Services Cloud Practitioner</h4>
+            <div class="certification-issuer">Udemy</div>
+            <div class="certification-date">Issued Aug 2024</div>
+            <div class="certification-credential">Credential URL: <a href="https://www.udemy.com/share/101th63@MHVAhnG-Hevc4-CGMm3qO0mGhOtJ8JeZCwFOrV3_5gahiwFLl3xrZZQlgpXyUzH1">https://www.udemy.com/share/101th63@MHVAhnG-Hevc4-CGMm3qO0mGhOtJ8JeZCwFOrV3_5gahiwFLl3xrZZQlgpXyUzH1</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/simpli-logo.png" alt="Simplilearn Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>Apache Spark Beginners Course</h4>
+            <div class="certification-issuer">Simplilearn</div>
+            <div class="certification-date">Issued Aug 2024</div>
+            <div class="certification-credential">Credential ID: 7317307</div>
+            <div class="certification-credential">Credential URL: <a href="https://www.udemy.com/share/101th63@MHVAhnG-Hevc4-CGMm3qO0mGhOtJ8JeZCwFOrV3_5gahiwFLl3xrZZQlgpXyUzH1">https://www.udemy.com/share/101th63@MHVAhnG-Hevc4-CGMm3qO0mGhOtJ8JeZCwFOrV3_5gahiwFLl3xrZZQlgpXyUzH1</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/simpli-logo.png" alt="Simplilearn Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>Databricks Certified Data Engineer Associate</h4>
+            <div class="certification-issuer">Simplilearn</div>
+            <div class="certification-date">Issued Aug 2024</div>
+            <div class="certification-credential">Credential ID: 53aef5e2b3f8f58cdef433e7744a7bd9a45069edd7d91980ac5636f797e6017f</div>                    
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/medidata.png" alt="Medidata Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>Medidata Rave EDC Certified Principal Investigator (2023)</h4>
+            <div class="certification-issuer">Medidata Solutions</div>
+            <div class="certification-date">Issued Jan 2023</div>
+            <div class="certification-credential">Credential URL: <a href="https://simpli.app.link/ZtIai7ORpMb">https://simpli.app.link/ZtIai7ORpMb</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/sas.png" alt="SAS Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>SAS Programming 1: Essentials</h4>
+            <div class="certification-issuer">SAS</div>
+            <div class="certification-date">Issued Jan 2022</div>
+            <div class="certification-credential">Credential URL: <a href="https://www.credly.com/badges/ad9553f6-90b2-472f-aebf-d5f5289ef7cd?source=linked_in_profile">https://www.credly.com/badges/ad9553f6-90b2-472f-aebf-d5f5289ef7cd?source=linked_in_profile</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/Udemy_logo.png" alt="Udemy Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>The R Programming For Data Science A-Z Complete Diploma 2021</h4>
+            <div class="certification-issuer">Udemy</div>
+            <div class="certification-date">Issued Dec 2021</div>
+            <div class="certification-credential">Credential ID: UC-d46bf812-f38e-4571-870d-9213c081382f</div>
+            <div class="certification-credential">Credential URL: <a href="https://www.udemy.com/certificate/UC-d46bf812-f38e-4571-870d-9213c081382f/">https://www.udemy.com/certificate/UC-d46bf812-f38e-4571-870d-9213c081382f/</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/uw.png" alt="University of Washington Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>Monitoring and Evaluation in Global Health</h4>
+            <div class="certification-issuer">University of Washington</div>
+            <div class="certification-date">Issued Apr 2021</div>                    
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/solo.png" alt="SoloLearn Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>Data Science with Python</h4>
+            <div class="certification-issuer">SoloLearn</div>
+            <div class="certification-date">Issued Sep 2020</div>
+            <div class="certification-credential">Credential ID: 1093-9143960</div>
+            <div class="certification-credential">Credential URL: <a href="https://www.sololearn.com/Certificate/1093-9143960/pdf/">https://www.sololearn.com/Certificate/1093-9143960/pdf/</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/Udemy_logo.png" alt="Udemy Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>Hands on Machine Learning Course</h4>
+            <div class="certification-issuer">Udemy</div>
+            <div class="certification-date">Issued Aug 2020</div>
+            <div class="certification-credential">Credential ID: UC-c5912861-1404-434f-93d4-727ed484027a</div>
+            <div class="certification-credential">Credential URL: <a href="https://www.udemy.com/certificate/UC-c5912861-1404-434f-93d4-727ed484027a/">https://www.udemy.com/certificate/UC-c5912861-1404-434f-93d4-727ed484027a/</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/solo.png" alt="SoloLearn Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>JavaScript Tutorial</h4>
+            <div class="certification-issuer">SoloLearn</div>
+            <div class="certification-date">Issued Aug 2020</div>
+            <div class="certification-credential">Credential ID: #1024-9143960</div>
+            <div class="certification-credential">Credential URL: <a href="https://www.sololearn.com/Certificate/1024-9143960/pdf/">https://www.sololearn.com/Certificate/1024-9143960/pdf/</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/solo.png" alt="SoloLearn Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>CSS Fundamentals</h4>
+            <div class="certification-issuer">SoloLearn</div>
+            <div class="certification-date">Issued Aug 2020</div>
+            <div class="certification-credential">Credential ID: #1023-9143960</div>
+            <div class="certification-credential">Credential URL: <a href="https://www.sololearn.com/Certificate/1023-9143960/pdf/">https://www.sololearn.com/Certificate/1023-9143960/pdf/</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/solo.png" alt="SoloLearn Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>HTML Fundamentals</h4>
+            <div class="certification-issuer">SoloLearn</div>
+            <div class="certification-date">Issued Jul 2020</div>
+            <div class="certification-credential">Credential ID: 1014-9143960</div>
+            <div class="certification-credential">Credential URL: <a href="https://www.sololearn.com/Certificate/1014-9143960/pdf/">https://www.sololearn.com/Certificate/1014-9143960/pdf/</a></div>
+        </div>
+    </div>
+    
+    <div class="certification-item">
+        <img src="images/skills/solo.png" alt="SoloLearn Logo" class="certification-logo">
+        <div class="certification-content">
+            <h4>PHP Tutorial</h4>
+            <div class="certification-issuer">SoloLearn</div>
+            <div class="certification-date">Issued Jun 2020</div>
+            <div class="certification-credential">Credential ID: 1059-9143960</div>
+            <div class="certification-credential">Credential URL: <a href="https://www.sololearn.com/Certificate/1059-9143960/pdf/">https://www.sololearn.com/Certificate/1059-9143960/pdf/</a></div>
+        </div>
+    </div>
+</div>
         </div>
     </div>
 
