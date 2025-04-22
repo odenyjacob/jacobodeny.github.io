@@ -495,7 +495,22 @@
                             </div>
                         </div> -->
                         
-                        <!-- Add a contact form -->
+                        <!-- Add a contact form --> 
+						<form action="https://formspree.io/f/mkgrnole" method="POST" class="mt-4">
+						<div class="mb-3">
+						<label class="form-label">Your Name</label>
+						<input type="text" name="name" class="form-control" required>
+						</div>
+						<div class="mb-3">
+						<label class="form-label">Email</label>
+						<input type="email" name="_replyto" class="form-control" required>
+						</div>
+						<div class="mb-3">
+						<label class="form-label">Message</label>
+						<textarea name="message" class="form-control" rows="3" required></textarea>
+						</div>
+						<button type="submit" class="btn btn-primary">Send Message</button>
+						</form>
                         <!-- <div class="card mt-4 border-0 shadow-sm">
                             <div class="card-body">
                                 <h5 class="card-title">Send a Message (In progress)</h5>
