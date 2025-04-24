@@ -3,23 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jacob Odeny - Clinical Data Manager/Engineer with 12+ years of experience in clinical data management and engineering">
     <title>Jacob Odeny - Clinical Data Manager/Engineer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #0d6efd;
-            --secondary-color: #6c757d;
-            --light-color: #f8f9fa;
-            --dark-color: #212529;
-        }
-        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--dark-color);
+            color: #333;
             line-height: 1.6;
-            background-color: #f5f7fa;
         }
         
         .profile-img {
@@ -31,22 +22,14 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             margin: 0 auto 20px;
             display: block;
-            transition: transform 0.3s ease;
-        }
-        
-        .profile-img:hover {
-            transform: scale(1.05);
         }
         
         .tab-content {
             padding: 30px;
             background: #fff;
             border-radius: 0 0 5px 5px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             min-height: 500px;
-            border-left: 1px solid #eee;
-            border-right: 1px solid #eee;
-            border-bottom: 1px solid #eee;
         }
         
         .nav-tabs {
@@ -55,59 +38,36 @@
         
         .nav-tabs .nav-link {
             border: none;
-            color: var(--secondary-color);
+            color: #495057;
             font-weight: 600;
             padding: 12px 25px;
             transition: all 0.3s;
-            position: relative;
         }
         
         .nav-tabs .nav-link:hover {
-            color: var(--primary-color);
-            background-color: rgba(13, 110, 253, 0.05);
+            border: none;
+            color: #0d6efd;
         }
         
         .nav-tabs .nav-link.active {
-            color: var(--primary-color);
+            color: #0d6efd;
             background-color: transparent;
-            border: none;
-        }
-        
-        .nav-tabs .nav-link.active::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: -2px;
-            width: 50%;
-            height: 3px;
-            background: var(--primary-color);
-            transform: translateX(-50%);
+            border-bottom: 3px solid #0d6efd;
         }
         
         .card {
             transition: transform 0.3s, box-shadow 0.3s;
             height: 100%;
-            border: none;
-            border-radius: 10px;
-            overflow: hidden;
         }
         
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-        
-        .card-img-top {
-            height: 180px;
-            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
         .tech-tags .badge {
             margin-right: 5px;
             margin-bottom: 5px;
-            font-weight: 500;
-            padding: 5px 10px;
-            border-radius: 4px;
         }
         
         .skill-icon {
@@ -115,45 +75,31 @@
             height: 50px;
             object-fit: contain;
             margin-right: 15px;
-            filter: grayscale(100%);
-            transition: filter 0.3s;
-        }
-        
-        .skill-icon:hover {
-            filter: grayscale(0%);
         }
         
         .table {
             margin-top: 20px;
-            border-radius: 8px;
-            overflow: hidden;
         }
         
         .table thead th {
-            background-color: var(--primary-color);
+            background-color: #0d6efd;
             color: white;
-            font-weight: 600;
-        }
-        
-        .table-hover tbody tr:hover {
-            background-color: rgba(13, 110, 253, 0.05);
         }
         
         .section-title {
             position: relative;
             margin-bottom: 30px;
             padding-bottom: 10px;
-            color: var(--dark-color);
         }
         
-        .section-title::after {
+        .section-title:after {
             content: '';
             position: absolute;
             left: 0;
             bottom: 0;
             width: 50px;
             height: 3px;
-            background: var(--primary-color);
+            background: #0d6efd;
         }
         
         .certification-item {
@@ -161,11 +107,6 @@
             padding-bottom: 20px;
             border-bottom: 1px solid #eee;
             display: flex;
-            transition: transform 0.3s;
-        }
-        
-        .certification-item:hover {
-            transform: translateX(5px);
         }
         
         .certification-logo {
@@ -174,10 +115,6 @@
             object-fit: contain;
             margin-right: 20px;
             flex-shrink: 0;
-            border-radius: 8px;
-            background: white;
-            padding: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
         .certification-content {
@@ -186,108 +123,60 @@
         
         .certification-item:last-child {
             border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
         }
         
         .certification-date {
-            color: var(--secondary-color);
+            color: #6c757d;
             font-size: 0.9rem;
         }
         
         .certification-issuer {
             font-weight: 600;
-            color: var(--dark-color);
+            color: #495057;
             margin-bottom: 5px;
         }
         
         .certification-credential {
             display: inline-block;
-            background-color: var(--light-color);
+            background-color: #f8f9fa;
             padding: 3px 8px;
             border-radius: 4px;
             font-size: 0.85rem;
             margin-top: 5px;
             margin-right: 5px;
-            font-family: monospace;
         }
         
         .certification-credential a {
             color: inherit;
             text-decoration: none;
-            transition: color 0.3s;
         }
         
         .certification-credential a:hover {
-            color: var(--primary-color);
             text-decoration: underline;
         }
         
-        /* Contact section styles */
+        /* New contact section styles */
         .contact-icon {
             font-size: 1.2rem;
             margin-right: 10px;
-            color: var(--primary-color);
+            color: #0d6efd;
             width: 25px;
             text-align: center;
-            transition: transform 0.3s;
         }
         
         .contact-link {
-            color: var(--dark-color);
+            color: #333;
             text-decoration: none;
             transition: color 0.3s;
         }
         
         .contact-link:hover {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        
-        .contact-link:hover .contact-icon {
-            transform: scale(1.2);
+            color: #0d6efd;
+            text-decoration: underline;
         }
         
         .contact-card {
-            border-left: 4px solid var(--primary-color);
-            border-radius: 8px;
-        }
-        
-        /* Form styles */
-        .form-control {
-            border-radius: 8px;
-            padding: 10px 15px;
-            border: 1px solid #ddd;
-            transition: all 0.3s;
-        }
-        
-        .form-control:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-        }
-        
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            padding: 10px 25px;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .btn-primary:hover {
-            background-color: #0b5ed7;
-            border-color: #0a58ca;
-            transform: translateY(-2px);
-        }
-        
-        /* Footer */
-        .footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 20px 0;
-            margin-top: 50px;
-            text-align: center;
+            border-left: 4px solid #0d6efd;
         }
         
         @media (max-width: 768px) {
@@ -308,219 +197,76 @@
             .certification-logo {
                 margin-bottom: 15px;
             }
-            
-            .tab-content {
-                padding: 20px 15px;
-            }
-            
-            .section-title {
-                font-size: 1.5rem;
-            }
-        }
-        
-        /* Animation */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .tab-pane {
-            animation: fadeIn 0.5s ease-out;
-        }
-        
-        /* Print styles */
-        @media print {
-            body {
-                background-color: white;
-                color: black;
-                font-size: 12pt;
-            }
-            
-            .container {
-                width: 100%;
-                max-width: 100%;
-                padding: 0;
-            }
-            
-            .nav-tabs, .footer, .btn {
-                display: none !important;
-            }
-            
-            .tab-content {
-                box-shadow: none;
-                border: none;
-                padding: 0;
-            }
-            
-            .tab-pane {
-                display: block !important;
-                opacity: 1 !important;
-                page-break-after: always;
-            }
-            
-            .profile-img {
-                float: right;
-                margin: 0 0 20px 20px;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container py-5">
         <div class="text-center mb-5">
-            <h2 class="display- fw-bold">Jacob Odeny</h2>
-            <h3 class="text-muted mb-4">Clinical Data Engineer</h3>
-            <p class="lead text-muted">12+ years of experience in clinical data management and engineering</p>
+            <h1 class="display-4">Jacob Odeny</h1>
+            <h2 class="text-muted">Clinical Data Engineer</h2>
         </div>
         
         <!-- Tab Navigation -->
-        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="true">
-                    <i class="fas fa-user me-2"></i>About Me
-                </button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills" type="button" role="tab" aria-controls="skills" aria-selected="false">
-                    <i class="fas fa-code me-2"></i>Skills
-                </button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects" type="button" role="tab" aria-controls="projects" aria-selected="false">
-                    <i class="fas fa-project-diagram me-2"></i>Projects
-                </button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="certifications-tab" data-bs-toggle="tab" data-bs-target="#certifications" type="button" role="tab" aria-controls="certifications" aria-selected="false">
-                    <i class="fas fa-certificate me-2"></i>Certifications
-                </button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
-                    <i class="fas fa-envelope me-2"></i>Contact
-                </button>
-            </li>
-        </ul>
+		
+        <!-- Updated Tab Navigation with Icons -->
+		<ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+			<li class="nav-item" role="presentation">
+				<button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="true">
+					<i class="fas fa-user me-2"></i>About Me
+				</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills" type="button" role="tab" aria-controls="skills" aria-selected="false">
+					<i class="fas fa-code me-2"></i>Skills
+				</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects" type="button" role="tab" aria-controls="projects" aria-selected="false">
+					<i class="fas fa-project-diagram me-2"></i>Projects
+				</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="certifications-tab" data-bs-toggle="tab" data-bs-target="#certifications" type="button" role="tab" aria-controls="certifications" aria-selected="false">
+					<i class="fas fa-certificate me-2"></i>Licenses & Certifications
+				</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
+					<i class="fas fa-envelope me-2"></i>Contact
+				</button>
+			</li>
+		</ul>
         
         <!-- Tab Content -->
         <div class="tab-content" id="myTabContent">
             <!-- About Me Tab -->
             <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
                 <div class="row">
-                    <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                    <div class="col-lg-4 text-center">
                         <img src="images/about/jacob-odeny.jpg" alt="Jacob Odeny" class="profile-img">
-                        <div class="d-flex justify-content-center mt-3">                            					
-							<li class="mb-3">
-                                <a href="D:\Jacob\Github\jacobodeny.github.io\files\resume.pdf" target="_blank" class="contact-link d-flex align-items-center">
-                                    <i class="fas fa-file-pdf contact-icon"></i> 
-                                    Download Resume
-                                </a>
-                            </li>
-							<div class="btn-group" role="group">
-								<a href="https://github.com/odenyjacob/jacobodeny.github.io/tree/main/files/resume" target="_blank" class="btn btn-outline-primary">
-									<i class="fas fa-file-pdf me-2"></i>PDF Version
-								</a>
-								<a href="./resume.html" class="btn btn-outline-secondary">
-									<i class="fas fa-file-alt me-2"></i>Web Version
-								</a>
-							</div>
-							
-                        </div>
                     </div>
+					
                     <div class="col-lg-8">
                         <h3 class="section-title">Professional Profile</h3>
-                        <p >Seasoned clinical data professional with 12+ years of experience managing and engineering data for public health initiatives and clinical trials across pharmaceutical organizations and CROs.</p>
-                        <p>Specialized in ensuring data integrity while meeting rigorous timelines and compliance standards. Proven leader with exceptional communication skills and a passion for mentoring team members. Recognized for balancing collaborative teamwork with self-directed project execution to drive successful study outcomes.</p>                        
+                        <p>Seasoned clinical data professional with 12+ years of experience managing and engineering data for public health initiatives and clinical trials across pharmaceutical organizations and CROs. Specialized in ensuring data integrity while meeting rigorous timelines and compliance standards.</p>    
+                        <p>Proven leader with exceptional communication skills and a passion for mentoring team members. Recognized for balancing collaborative teamwork with self-directed project execution to drive successful study outcomes.</p>                        
                         <p>Currently serving as an FSP Clinical Data Manager/Engineer, building on previous roles as Data Manager and Data Analyst to deliver comprehensive data solutions throughout the clinical research lifecycle.</p>
-                        
-                        <div class="mt-5">
+                        <div class="mt-4">
                             <h3 class="section-title">Key Strengths</h3>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="d-flex mb-3">
-                                        <div class="me-3 text-primary">
-                                            <i class="fas fa-check-circle fa-lg"></i>
-                                        </div>
-                                        <div>
-                                            <strong>Clinical Data Systems:</strong> Advanced proficiency in industry-leading platforms like Medidata RAVE, Veeva Clinical, and Elluminate for end-to-end data management.
-                                        </div>
-                                    </div>
-                                    <div class="d-flex mb-3">
-                                        <div class="me-3 text-primary">
-                                            <i class="fas fa-check-circle fa-lg"></i>
-                                        </div>
-                                        <div>
-                                            <strong>Regulatory Compliance:</strong> Deep understanding of CDISC standards (CDASH,SDTM and ADaM) and clinical trial regulations (ICH-GCP, 21 CFR Part 11).
-                                        </div>
-                                    </div>
-                                    <div class="d-flex mb-3">
-                                        <div class="me-3 text-primary">
-                                            <i class="fas fa-check-circle fa-lg"></i>
-                                        </div>
-                                        <div>
-                                            <strong>Data Visualization:</strong> Designed interactive dashboards and reports using Tableau, Power BI, and R Shiny to drive data-driven decision-making.
-                                        </div>
-                                    </div>
-                                    <div class="d-flex mb-3">
-                                        <div class="me-3 text-primary">
-                                            <i class="fas fa-check-circle fa-lg"></i>
-                                        </div>
-                                        <div>
-                                            <strong>ETL & Data Pipelines:</strong> Built and optimized data workflows with Veeva CDB, Elluminate, SQL, Databricks, and Apache Spark.
-                                        </div>
-                                    </div>
-                                    <div class="d-flex mb-3">
-                                        <div class="me-3 text-primary">
-                                            <i class="fas fa-check-circle fa-lg"></i>
-                                        </div>
-                                        <div>
-                                            <strong>Clinical Programming:</strong> Developed custom scripts and tools in R, Python, and SAS for data transformation, analysis, and quality control.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-flex mb-3">
-                                        <div class="me-3 text-primary">
-                                            <i class="fas fa-check-circle fa-lg"></i>
-                                        </div>
-                                        <div>
-                                            <strong>Cloud & Big Data:</strong> Leveraged AWS cloud services for scalable data solutions and storage.
-                                        </div>
-                                    </div>
-                                    <div class="d-flex mb-3">
-                                        <div class="me-3 text-primary">
-                                            <i class="fas fa-check-circle fa-lg"></i>
-                                        </div>
-                                        <div>
-                                            <strong>Web Development:</strong> Applied front-end skills (HTML/CSS/JavaScript) to create user-friendly data interfaces.
-                                        </div>
-                                    </div>
-                                    <div class="d-flex mb-3">
-                                        <div class="me-3 text-primary">
-                                            <i class="fas fa-check-circle fa-lg"></i>
-                                        </div>
-                                        <div>
-                                            <strong>Data Quality:</strong> Implemented robust validation frameworks to ensure compliance and accuracy in clinical datasets.
-                                        </div>
-                                    </div>
-                                    <div class="d-flex mb-3">
-                                        <div class="me-3 text-primary">
-                                            <i class="fas fa-check-circle fa-lg"></i>
-                                        </div>
-                                        <div>
-                                            <strong>Problem-Solving:</strong> Resolved complex data discrepancies through root-cause analysis and cross-functional collaboration.
-                                        </div>
-                                    </div>
-                                    <div class="d-flex mb-3">
-                                        <div class="me-3 text-primary">
-                                            <i class="fas fa-check-circle fa-lg"></i>
-                                        </div>
-                                        <div>
-                                            <strong>Communication:</strong> Translated technical insights into actionable recommendations for stakeholders across functions.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <ul>
+                                <li><strong>Clinical Data Systems:</strong> Advanced proficiency in industry-leading platforms like Medidata RAVE, Veeva Clinical, and Elluminate for end-to-end data management.</li>
+                                <li><strong>Regulatory Compliance:</strong> Deep understanding of CDISC standards (SDTM, ADaM) and clinical trial regulations (ICH-GCP, 21 CFR Part 11).</li>
+                                <li><strong>Data Visualization:</strong> Designed interactive dashboards and reports using Tableau, Power BI, and R Shiny to drive data-driven decision-making.</li>
+                                <li><strong>ETL & Data Pipelines:</strong> Built and optimized data workflows with Veeva CDB, Elluminate, SQL, Databricks, and Apache Spark.</li>
+                                <li><strong>Clinical Programming:</strong> Developed custom scripts and tools in R, Python, and SAS for data transformation, analysis, and quality control.</li>
+                                <li><strong>Cloud & Big Data:</strong> Leveraged AWS cloud services for scalable data solutions and storage.</li>
+                                <li><strong>Web Development:</strong> Applied front-end skills (HTML/CSS/JavaScript) to create user-friendly data interfaces.</li>
+                                <li><strong>Data Quality:</strong> Implemented robust validation frameworks to ensure compliance and accuracy in clinical datasets.</li>
+                                <li><strong>Problem-Solving:</strong> Resolved complex data discrepancies through root-cause analysis and cross-functional collaboration.</li>
+                                <li><strong>Team Leadership:</strong> Mentored junior analysts and led data management initiatives to streamline trial workflows.</li>
+                                <li><strong>Communication:</strong> Translated technical insights into actionable recommendations for stakeholders across functions.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -529,133 +275,76 @@
             <!-- Skills Tab -->
             <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skills-tab">
                 <h3 class="section-title">Technical Skills</h3>
-                <div class="alert alert-info">
-                    <i class="fas fa-info-circle me-2"></i> Hover over skill icons to see them in color and click on any skill category for more details.
-                </div>
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th width="30%">Skill Category</th>
+                            <th>Skill Category</th>
                             <th>Tools & Technologies</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>
-                                <a href="#" class="text-decoration-none text-dark" data-bs-toggle="tooltip" title="Click for more details">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/skills/dm.jpg" alt="Data Management" class="skill-icon">
-                                        <span>Data Management</span>
-                                    </div>
-                                </a>
+                                <div class="d-flex align-items-center">
+                                    <img src="images/skills/dm.jpg" alt="Data Management" class="skill-icon">
+                                    <span>Data Management</span>
+                                </div>
                             </td>
-                            <td>
-                                <span class="badge bg-primary">Medidata Rave</span>
-                                <span class="badge bg-secondary">Veeva Clinical Platform</span>
-                                <span class="badge bg-success">Medrio</span>
-                                <span class="badge bg-danger">ODK</span>
-                                <span class="badge bg-warning text-dark">RedCap</span>
-                                <span class="badge bg-info text-dark">Commcare</span>
-                                <span class="badge bg-dark">Microsoft Access</span>
-                            </td>
+                            <td>Medidata Rave, Veeva CDB, Medrio, ODK, RedCap, Commcare, Microsoft Access</td>
                         </tr>
                         <tr>
                             <td>
-                                <a href="#" class="text-decoration-none text-dark" data-bs-toggle="tooltip" title="Click for more details">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/skills/etl.png" alt="Data ETL" class="skill-icon">
-                                        <span>Data ETL</span>
-                                    </div>
-                                </a>
+                                <div class="d-flex align-items-center">
+                                    <img src="images/skills/etl.png" alt="Data ETL" class="skill-icon">
+                                    <span>Data ETL</span>
+                                </div>
                             </td>
-                            <td>
-                                <span class="badge bg-primary">Elluminate</span>
-                                <span class="badge bg-secondary">Veeva CDB</span>
-                                <span class="badge bg-success">SQL</span>
-                                <span class="badge bg-danger">Databricks</span>
-                                <span class="badge bg-warning text-dark">Apache Spark</span>
-                            </td>
+                            <td>Elluminate, Veeva CDB, SQL, Databricks, Apache Spark</td>
                         </tr>
                         <tr>
                             <td>
-                                <a href="#" class="text-decoration-none text-dark" data-bs-toggle="tooltip" title="Click for more details">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/skills/dma.jpg" alt="Data Analysis" class="skill-icon">
-                                        <span>Data Manipulation & Analysis</span>
-                                    </div>
-                                </a>
+                                <div class="d-flex align-items-center">
+                                    <img src="images/skills/dma.jpg" alt="Data Analysis" class="skill-icon">
+                                    <span>Data Manipulation & Analysis</span>
+                                </div>
                             </td>
-                            <td>
-                                <span class="badge bg-primary">Microsoft Excel</span>
-                                <span class="badge bg-secondary">SPSS</span>
-                                <span class="badge bg-success">R</span>
-                                <span class="badge bg-danger">STATA</span>
-                                <span class="badge bg-warning text-dark">SAS</span>
-                                <span class="badge bg-info text-dark">Python</span>
-                            </td>
+                            <td>Microsoft Excel, SPSS, R, STATA, SAS, Python</td>
                         </tr>
                         <tr>
                             <td>
-                                <a href="#" class="text-decoration-none text-dark" data-bs-toggle="tooltip" title="Click for more details">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/skills/dtl.jpg" alt="Data Transformation" class="skill-icon">
-                                        <span>Data Transformation & Listing</span>
-                                    </div>
-                                </a>
+                                <div class="d-flex align-items-center">
+                                    <img src="images/skills/dtl.jpg" alt="Data Transformation" class="skill-icon">
+                                    <span>Data Transformation & Listing</span>
+                                </div>
                             </td>
-                            <td>
-                                <span class="badge bg-primary">Veeva CDB</span>
-                                <span class="badge bg-secondary">Elluminate</span>
-                                <span class="badge bg-success">JReview</span>
-                                <span class="badge bg-danger">R</span>
-                                <span class="badge bg-warning text-dark">SQL</span>
-                            </td>
+                            <td>Veeva CDB, Elluminate, JReview, R, SQL</td>
                         </tr>
                         <tr>
                             <td>
-                                <a href="#" class="text-decoration-none text-dark" data-bs-toggle="tooltip" title="Click for more details">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/skills/DataViz.png" alt="Data Visualization" class="skill-icon">
-                                        <span>Data Visualization</span>
-                                    </div>
-                                </a>
+                                <div class="d-flex align-items-center">
+                                    <img src="images/skills/DataViz.png" alt="Data Visualization" class="skill-icon">
+                                    <span>Data Visualization</span>
+                                </div>
                             </td>
-                            <td>
-                                <span class="badge bg-primary">Qlik Sense</span>
-                                <span class="badge bg-secondary">R Shiny</span>
-                                <span class="badge bg-success">Tableau</span>
-                                <span class="badge bg-danger">Power BI</span>
-                                <span class="badge bg-warning text-dark">Microsoft Excel</span>
-                            </td>
+                            <td>Qlik Sense, R Shiny, Tableau, Power BI, Microsoft Excel</td>
                         </tr>
                         <tr>
                             <td>
-                                <a href="#" class="text-decoration-none text-dark" data-bs-toggle="tooltip" title="Click for more details">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/skills/wbp.jpg" alt="Web Development" class="skill-icon">
-                                        <span>Web-based Programming</span>
-                                    </div>
-                                </a>
+                                <div class="d-flex align-items-center">
+                                    <img src="images/skills/wbp.jpg" alt="Web Development" class="skill-icon">
+                                    <span>Web-based Programming</span>
+                                </div>
                             </td>
-                            <td>
-                                <span class="badge bg-primary">HTML</span>
-                                <span class="badge bg-secondary">CSS</span>
-                                <span class="badge bg-success">JavaScript</span>
-                                <span class="badge bg-danger">PHP</span>
-                            </td>
+                            <td>HTML, CSS, JavaScript, PHP</td>
                         </tr>
                         <tr>
                             <td>
-                                <a href="#" class="text-decoration-none text-dark" data-bs-toggle="tooltip" title="Click for more details">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/skills/cloud.png" alt="Cloud Computing" class="skill-icon">
-                                        <span>Cloud Computing</span>
-                                    </div>
-                                </a>
+                                <div class="d-flex align-items-center">
+                                    <img src="images/skills/cloud.png" alt="Cloud Computing" class="skill-icon">
+                                    <span>Cloud Computing</span>
+                                </div>
                             </td>
-                            <td>
-                                <span class="badge bg-primary">AWS (Amazon Web Services)</span>
-                            </td>
+                            <td>AWS (Amazon Web Services)</td>
                         </tr>
                     </tbody>
                 </table>
@@ -664,9 +353,6 @@
             <!-- Projects Tab -->
             <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="projects-tab">
                 <h3 class="section-title">Featured Projects</h3>
-                <div class="alert alert-info mb-4">
-                    <i class="fas fa-lightbulb me-2"></i> Click on any project card to learn more about the technologies used and see them in action.
-                </div>
                 <div class="row">
                     <!-- Clinical Studies Dashboard -->
                     <div class="col-md-6 col-lg-4 mb-4">
@@ -675,16 +361,13 @@
                             <div class="card-body">
                                 <h5 class="card-title">Clinical Studies Dashboard</h5>
                                 <p class="card-text">
-                                    Interactive dashboard that transforms clinical trial information into actionable insights for higher level management.
-                                </p>
-                                <ul class="mb-3">
-                                    <li>Color-coded visualizations and smart filters</li>
-                                    <li>Total number of studies (active, completed etc)</li>
-                                    <li>Studies by phase (1, 2, 3B, 4)</li>
-                                    <li>Studies by therapeutic area</li>
-                                    <li>Studies by completion status</li>
-                                    <li>Studies by PI</li>	
-                                </ul>
+                                    Interactive dashboard that transforms clinical trial information into actionable insights for higher level management. Features include:-</p>
+                                <li>Color-coded visualizations and smart filters</li>
+                                <li>Total number of studies (active, completed etc)</li>
+                                <li>Studies by phase (1, 2, 3B, 4)</li>
+                                <li>Studies by therapeutic area</li>
+                                <li>Studies by completion status</li>
+                                <li>Studies by PI</li>	
                                 <div class="tech-tags mb-3">
                                     <span class="badge bg-primary">Shiny</span>
                                     <span class="badge bg-secondary">R</span>
@@ -694,13 +377,9 @@
                                     <span class="badge bg-dark">openxlsx</span>
                                 </div>
                             </div>
-                            <div class="card-footer bg-transparent border-top-0">
-                                <a href="https://odenyjacob.shinyapps.io/studies-dashboard/" target="_blank" class="btn btn-primary me-2">
-                                    <i class="fas fa-external-link-alt me-1"></i> View App
-                                </a>
-                                <a href="https://github.com/odenyjacob/studies-dashboard/blob/main/app.R" target="_blank" class="btn btn-outline-secondary">
-                                    <i class="fab fa-github me-1"></i> View Code
-                                </a>
+                            <div class="card-footer bg-transparent">
+                                <a href="https://odenyjacob.shinyapps.io/studies-dashboard/" target="_blank" class="btn btn-primary me-2">View App</a>
+                                <a href="https://github.com/odenyjacob/studies-dashboard/blob/main/app.R" target="_blank" class="btn btn-outline-secondary">Explore Code</a>
                             </div>
                         </div>
                     </div>
@@ -711,14 +390,13 @@
                             <img src="images/projects/listings.jpg" class="card-img-top" alt="Data listing">
                             <div class="card-body">
                                 <h5 class="card-title">Data Listing and Report</h5>
-                                <p class="card-text">The analysis focuses on identifying visits where vital signs documentation is missing, which is critical for patient safety and quality reporting.</p>
-                                <ul class="mb-3">
-                                    <li>Patient demographic overview</li>
-                                    <li>Visit records analysis</li>
-                                    <li>Data quality gap identification</li>
-                                    <li>Interactive visualizations of missing data patterns</li>
-                                    <li>Automate and standardize reporting</li>
-                                </ul>
+                                <p class="card-text">The analysis focuses on identifying visits where vital signs documentation is missing, which is critical for patient safety and quality reporting. The report includes:-</p>
+                                <li>Patient demographic overview</li>
+                                <li>Visit records analysis</li>
+                                <li>Data quality gap identification</li>
+                                <li>Interactive visualizations of missing data patterns</li>
+                                <li>Automate and standardize reporting by rendering reproducible HTML reports with current data using</li>
+                                <p>This work exemplifies how data analysis can improve clinical documentation completeness and support healthcare quality improvement initiatives.</p>
                                 <div class="tech-tags mb-3">
                                     <span class="badge bg-primary">R Markdown</span>
                                     <span class="badge bg-secondary">R</span>
@@ -728,13 +406,9 @@
                                     <span class="badge bg-dark">kableExtra</span>
                                 </div>
                             </div>
-                            <div class="card-footer bg-transparent border-top-0">
-                                <a href="https://rpubs.com/odenyj/1296580" target="_blank" class="btn btn-primary me-2">
-                                    <i class="fas fa-external-link-alt me-1"></i> View Report
-                                </a>
-                                <a href="https://github.com/odenyjacob/data-listing/blob/main/R/Visits_Missing_Vital_Signs_Report.Rmd" target="_blank" class="btn btn-outline-secondary">
-                                    <i class="fab fa-github me-1"></i> View Code
-                                </a>
+                            <div class="card-footer bg-transparent">
+                                <a href="https://rpubs.com/odenyj/1296580" class="btn btn-primary me-2">View Report</a>
+                                <a href="https://github.com/odenyjacob/data-listing/blob/main/R/Visits_Missing_Vital_Signs_Report.Rmd" class="btn btn-outline-secondary">Explore Code</a>
                             </div>
                         </div>
                     </div>
@@ -745,8 +419,8 @@
                             <img src="images/projects/portfolio-screenshot.jpg" class="card-img-top" alt="Portfolio Project">
                             <div class="card-body">
                                 <h5 class="card-title">Meta Portfolio</h5>
-                                <p class="card-text">A self-referential showcase of this portfolio's design and development.</p>
-                                <ul class="mb-3">
+                                <p class="card-text"> A self-referential showcase of this portfolio's design and development. Features include:</p>
+                                <ul>
                                     <li>Responsive layout with Bootstrap 5</li>
                                     <li>Interactive tabbed navigation</li>
                                     <li>Dynamic hover effects and animations</li>
@@ -754,20 +428,16 @@
                                     <li>Mobile-first design principles</li>
                                 </ul>
                                 <div class="tech-tags mb-3">
-                                    <span class="badge bg-primary">HTML5</span>
-                                    <span class="badge bg-secondary">CSS3</span>
-                                    <span class="badge bg-success">Bootstrap 5</span>
-                                    <span class="badge bg-info">Bootstrap JS</span>
-                                    <span class="badge bg-dark">Git</span>
+                                        <span class="badge bg-primary">HTML5</span>
+                                        <span class="badge bg-secondary">CSS3</span>
+                                        <span class="badge bg-success">Bootstrap 5</span>
+                                        <span class="badge bg-info">Bootstrap JS</span>
+                                        <span class="badge bg-dark">Git</span>
                                 </div>
                             </div>
-                            <div class="card-footer bg-transparent border-top-0">
-                                <a href="#" class="btn btn-primary me-2">
-                                    <i class="fas fa-external-link-alt me-1"></i> View website (This website!)
-                                </a>
-                                <a href="https://github.com/odenyjacob/jacob-odeny-portfolio/blob/main/index.html" target="_blank" class="btn btn-outline-secondary">
-                                    <i class="fab fa-github me-1"></i> View Code
-                                </a>
+                            <div class="card-footer bg-transparent">
+                                <a href="#" class="btn btn-primary me-2">View App (This Page!)</a>
+                                <a href="https://github.com/odenyjacob/jacob-odeny-portfolio/blob/main/index.html" target="_blank" class="btn btn-outline-secondary">Explore Code</a>
                             </div>
                         </div>
                     </div>
@@ -777,9 +447,6 @@
             <!-- Certifications Tab -->
             <div class="tab-pane fade" id="certifications" role="tabpanel" aria-labelledby="certifications-tab">
                 <h3 class="section-title">Licenses & Certifications</h3>
-                <div class="alert alert-info mb-4">
-                    <i class="fas fa-certificate me-2"></i> Click on any credential link to verify the certification.
-                </div>
                 
                 <div class="certification-item">
                     <img src="images/skills/jreview.png" alt="JReview Logo" class="certification-logo">
@@ -992,127 +659,72 @@
                 </div>
             </div>
             
-  <!-- Contact Tab -->
-<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-    <div class="row g-4"> <!-- Added g-4 for consistent gutter spacing -->
-        <div class="col-lg-6">
-            <div class="h-100 d-flex flex-column"> <!-- Added flex container -->
-                <h3 class="section-title">Get In Touch</h3>
-                <div class="card contact-card shadow-sm flex-grow-1"> <!-- flex-grow-1 to fill available space -->
-                    <div class="card-body d-flex flex-column h-100"> <!-- Nested flex container -->
-                        <ul class="list-unstyled mb-0 flex-grow-1"> <!-- flex-grow-1 for equal height -->
-                            <li class="mb-3">
-                                <a href="mailto:odenyjacob@gmail.com" class="contact-link d-flex align-items-center">
+            <!-- Contact Tab (now properly placed inside tab-content) -->
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="row">
+                    <h3 class="section-title">Get In Touch</h3>
+                    <div class="card contact-card border-0 shadow-sm mb-4">
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
                                     <i class="fas fa-envelope contact-icon"></i>
-                                    odenyjacob@gmail.com
-                                </a>
-                            </li>
-                            <li class="mb-3">
-                                <a href="https://www.linkedin.com/in/odeny-jacob-2498a4156" target="_blank" class="contact-link d-flex align-items-center">
+                                    <a href="mailto:odenyjacob@gmail.com" alt="Email">odenyjacob@gmail.com</a>
+                                </li>
+                                <li class="mb-3">
                                     <i class="fab fa-linkedin contact-icon"></i>
-                                    LinkedIn Profile
-                                </a>
-                            </li>
-                            <li class="mb-3">
-                                <a href="https://github.com/odenyjacob" target="_blank" class="contact-link d-flex align-items-center">
+                                    <a href="https://www.linkedin.com/in/odeny-jacob-2498a4156" target="_blank" alt="LinkedIn">LinkedIn</a>
+                                </li>
+                                <li class="mb-3">
                                     <i class="fab fa-github contact-icon"></i>
-                                    GitHub Profile
-                                </a>
-                            </li>
-                            <li class="mb-3">
-                                <a href="D:\Jacob\Github\jacobodeny.github.io\files\resume" target="_blank" class="contact-link d-flex align-items-center">
-                                    <i class="fas fa-file-pdf contact-icon"></i> <!-- Fixed icon class -->
-                                    Download Resume
-                                </a>
-                            </li>
-                        </ul>                       
-                    </div>
+                                    <a href="https://github.com/odenyjacob" target="_blank"> GitHub</a>
+                                </li>
+								<li class="mb-3">
+									<i class="fas fa-file-alt contact-icon"></i>
+									<a href="https://raw.githubusercontent.com/odenyjacob/jacobodeny.github.io/main/files/resume/Jacob_Odeny_Resume.pdf" 
+									   class="about-link" 
+									   download="Jacob_Odeny_Resume.pdf">
+									   Download Resume
+									</a>
+								</li>
+
+                                     
+                    <!-- Contact Form --> 
+                    <h3 class="section-title">Leave a message</h3>
+                    <form action="https://formspree.io/f/mkgrnole" method="POST" class="mt-4">
+                        <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" name="name" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" name="_replyto" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea name="message" class="form-control" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
             </div>
-        </div>
-                    
-                    <div class="col-lg-6">
-                        <h3 class="section-title">Leave a Message</h3>
-                        <form action="https://formspree.io/f/mkgrnole" method="POST" class="mt-4">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Your Name</label>
-                                <input type="text" name="name" id="name" class="form-control" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email Address</label>
-                                <input type="email" name="_replyto" id="email" class="form-control" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="subject" class="form-label">Subject</label>
-                                <input type="text" name="_subject" id="subject" class="form-control" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea name="message" id="message" class="form-control" rows="5" required></textarea>
-                            </div>
-                            <input type="hidden" name="_next" value="/thank-you.html">
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fas fa-paper-plane me-1"></i> Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <footer class="footer">
+        </div> <!-- End of tab-content -->
+    </div> <!-- End of container -->
+	
+	<!-- Footer -->
+    <footer class="bg-light py-4 mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2025 Jacob Odeny. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">                    
-					<a href="https://www.linkedin.com/in/odeny-jacob-2498a4156" class="text-white me-3"><i class="fab fa-linkedin fa-lg"></i></a>
-                    <a href="https://github.com/odenyjacob" class="text-white me-3"><i class="fab fa-github fa-lg"></i></a>
-					<a href="mailto:odenyjacob@gmail.com" class="text-white"><i class="fas fa-envelope fa-lg"></i> odenyjacob@gmail.com</a>                    
-                </div>
-            </div>
-        </div>
+                    <p class="mb-0">&copy; <span id="current-year"></span> Jacob Odeny. All rights reserved.</p>
+                </div>                
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Initialize tooltips
-        document.addEventListener('DOMContentLoaded', function() {
-            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-                return new bootstrap.Tooltip(tooltipTriggerEl);
-            });
-            
-            // Add smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-        
-        // Function to switch to contact tab
-        function switchToContactTab() {
-            const contactTab = new bootstrap.Tab(document.getElementById('contact-tab'));
-            contactTab.show();
-        }
-        
-        // Print functionality
-        function printCV() {
-            window.print();
-        }
+        // Auto-update year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
